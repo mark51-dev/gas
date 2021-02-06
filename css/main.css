@@ -1,0 +1,20 @@
+html {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.advantage-list__item {
+    text-align: center;
+}
