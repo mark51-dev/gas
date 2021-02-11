@@ -83,6 +83,14 @@
     .contact-page-form {
         transform: translateY(-50%);
     }
+
+    .acts-list {
+        margin-top: -260px;
+    }
+
+    .acts-main-padd {
+        padding-bottom: 8.375rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -103,6 +111,16 @@
         position: relative;
         min-height: 227px;
     }
+
+
+    .company-mg-top-second {
+        display: block;
+    }
+
+    .company-main-padd {
+        height: 1024px;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -122,5 +140,13 @@
         width: 100%;
         position: relative;
         min-height: 274px;
+    }
+
+    .company-top-bg-image {
+        display: block;
+    }
+
+    .weird-image-7 {
+        display: block;
     }
 }

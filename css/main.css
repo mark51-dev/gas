@@ -111,7 +111,9 @@ h3 {
 .services-item__text,
 .contact-form__description,
 .about-documents__description,
-contact-page__description{
+.contact-page__description,
+.acts-page__description,
+.company-page__description {
     font-family: Roboto, sans-serif;
     font-weight: 400;
 }
@@ -452,7 +454,7 @@ contact-page__description{
     margin-right: 1.75rem;
     font-size: 1rem;
     line-height: 1.438rem;
-    padding: 3.313rem 0;
+    padding: 1.313rem 0;
 }
 
 .footer-nav__link {
@@ -666,4 +668,105 @@ label {
 
 .tariffs-table-bg {
     background: #EDF5FF;
+}
+
+
+/* acts */
+
+.acts-page-top-padd {
+    background: url("../images/Group 101.jpg") no-repeat center center;
+    color: #ffffff;
+    padding: 7.063rem 0;
+}
+
+.acts-main-padd {
+    background: #EDF5FF;
+}
+
+
+.acts-page__description {
+    color: #B5C3CA;
+}
+
+
+.acts-list {
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 5px;
+}
+
+
+.acts-list__item {
+    margin-bottom: 1.25rem;
+    font-family: Roboto, sans-serif;
+}
+
+
+/* company */
+
+.company-page-top-padd {
+    padding: 8.825rem 0;
+    background: #EDF5FF;
+    position: relative;
+}
+
+.company-top-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: none;
+}
+
+.company-top-bg-image:after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    background: url("../images/1.svg") no-repeat;
+    position: absolute;
+}
+
+.weird-image-7 {
+    position: absolute;
+    right: 7.375rem;
+    top: 354px;
+    display: none;
+}
+
+.company-main-padd {
+    background: url("../images/Group 106.svg") no-repeat center center;
+    padding: 80px 6rem;
+}
+
+
+.numbers {
+    text-align: center;
+}
+
+.numbers span {
+    color: #00B3E4;
+    font-weight: 900;
+    font-size: 64px;
+}
+
+.company-mg-top {
+    margin-top: 7.5rem;
+}
+
+.company-mg-top-second {
+    margin-top: 5.625rem;
+    margin-bottom: 9.063rem;
+    display: none;
+}
+
+.footer.company-page {
+    border-top: 1px solid #CDDBEA;
+}
+
+
+.logo {
+    padding: 1rem 0 1.5rem;
 }
