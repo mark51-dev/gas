@@ -1,20 +1,49 @@
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/helvetica/HelveticaNowDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/helvetica/HelveticaNowDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/helvetica/HelveticaNowDisplay-Bold.woff2') format('woff2'),
+    url('../fonts/helvetica/HelveticaNowDisplay-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/roboto/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
 html {
     font-size: 8px;
     line-height: 21px;
+}
+
+body {
+    font-family: helvetica, sans-serif;
 }
 
 ul {
     list-style-type: none;
 }
 
+h1 {
+    font-weight: 700;
+}
+
 h2 {
     font-size: 3rem;
     line-height: 2.188rem;
+    font-weight: 700;
 }
 
 h3 {
     font-size: 1.5rem;
     line-height: 2.188rem;
+    font-weight: 700;
 }
 
 .position-relative {
@@ -48,8 +77,9 @@ h3 {
     border-bottom: 1px solid #324152;
 }
 
-.left-line {
+.left-right-line {
     border-left: 1px solid #324152;
+    border-right: 1px solid #324152;
 }
 
 .color-light-blue {
@@ -68,13 +98,38 @@ h3 {
     color: #101423;
     font-size: 1.125rem;
     font-weight: 700;
+    transition: .3s;
+}
+
+.color-black-fs-18-700:hover {
+    color: #00B3E4;
+    text-decoration: none;
+}
+
+.advantages__description,
+.header-descripntion,
+.services-item__text,
+.contact-form__description,
+.about-documents__description,
+contact-page__description{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
 }
 
 .header {
     background-image: url("../images/header-bg.jpg");
     background-size: cover;
     background-position: center center;
-    height: 67.5rem;
+    height: 100vh;
+}
+
+.header > .container {
+    height: 100%;
+    display: flex;
+}
+
+.header > .container > .row {
+    margin-top: -100px;
 }
 
 .header-nav {
@@ -98,6 +153,10 @@ h3 {
     transition: .3s;
 }
 
+.wrapper100height {
+    height: 100%;
+}
+
 .logo-block {
     color: #ffffff;
     padding: 0.938rem 0;
@@ -110,15 +169,32 @@ h3 {
 
 .phone-block {
     color: #FFFFFF;
-    padding: 0.313rem 0;
+    padding: 0.938rem 0;
+    position: relative;
+}
+
+.phone-block:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../images/call 1.svg");
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    background-size: contain;
+    transform: translate(-150%, 70%);
 }
 
 .phone-block__phone-number {
     font-size: 1rem;
 }
 
+.phone-block__phone-number a {
+    color: #fff;
+}
+
 .header-heading {
-    margin-top: 24.063rem;
     color: #ffffff;
 }
 
@@ -180,7 +256,7 @@ h3 {
     margin-top: 1.875rem;
     padding: 3.375rem 1.625rem 3.625rem;
     background: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .advantage-list__item:before {
@@ -204,9 +280,10 @@ h3 {
     left: 0;
     width: 100%;
     height: 0;
-    border-left: 286px solid transparent;
-    border-right: 286px solid transparent;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
     border-top: 22px solid white;
+    display: none;
 }
 
 .advantage-list__item-heading {
@@ -221,7 +298,7 @@ h3 {
     padding: 7.5rem 0;
 }
 
-.services-item__image {
+.services-item__inner-image {
     width: 100%;
 }
 
@@ -416,6 +493,45 @@ label {
     display: none;
 }
 
+.contact-page .nav {
+    border-bottom: 1px solid black;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+}
+
+.contact-page .menu {
+    margin: 0 30px 0 0;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+}
+.contact-page .menu a {
+    clear: right;
+    text-decoration: none;
+    color: #4C5472;
+    margin: 0 10px;
+    line-height: 70px;
+    font-size: 14px;
+    background: #EDF5FF;
+}
+
+.contact-page label {
+    margin: 0 10px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: black;
+}
+
+.contact-page #toggle {
+    display: none;
+}
+
+
 
 @media only screen and (max-width: 767px) {
     label {
@@ -440,5 +556,114 @@ label {
     .main-menu {
         display: none;
     }
+
+    .contact-page label {
+        display: block;
+        cursor: pointer;
+    }
+    .contact-page .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .contact-page .menu a {
+        display: block;
+        border-bottom: 1px solid #4C5472;
+        margin: 0;
+
+    }
+    .contact-page #toggle:checked + .menu {
+        display: block;
+    }
+
+    .contact-page .main-menu {
+        display: none;
+    }
 }
 
+
+
+/* contacts page*/
+
+.contact-page {
+    background-image: none;
+}
+
+
+.contact-page .header-nav__link {
+    color: #4C5472;
+}
+
+.contact-page .header-nav__link:hover {
+    color: #00B3E4;
+}
+
+.contact-page .phone-block__phone-number a {
+    color: #4C5472;
+}
+
+.contact-page .bottom-line {
+    border: none;
+}
+
+.contact-page .left-right-line {
+    border: none;
+}
+
+.contact-page-main {
+    background: #EDF5FF;
+}
+
+
+.contact-page-top-padd {
+    padding: 3.563rem 0;
+}
+
+
+/* tariffs */
+
+.tariffs-page-top-padd {
+    background: url("../images/Group 101.jpg") no-repeat center center;
+    padding: 7.063rem;
+}
+
+.tariffs-page-top-padd .tariffs-page-heading {
+    color: #ffffff;
+}
+
+
+.tariffs-page-top-padd .tariffs-page__description {
+    color: #B5C3CA;
+}
+
+
+.tariffs-thead-row {
+    background: #1F253D;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.tariffs-thead-col {
+    padding: 1.75rem 3.125rem;
+}
+
+.tariffs-body-row {
+    text-align: center;
+    border-bottom: 4px solid lightgray;
+}
+
+.tariffs-body-col {
+    padding: 20px 0;
+}
+
+.tariffs-body-row:nth-child(even) {
+    background: #F6FAFF;
+}
+
+.tariffs-table-padd {
+    padding: 2.5rem 0 9.563rem 0;
+}
+
+.tariffs-table-bg {
+    background: #EDF5FF;
+}

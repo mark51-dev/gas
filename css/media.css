@@ -4,7 +4,7 @@
         line-height: 21px;
     }
 
-    .advantage-list__item {
+    .services-item__image {
 
     }
 
@@ -19,12 +19,6 @@
     html {
         font-size: 12px;
         line-height: 21px;
-    }
-
-    .advantage-list__item:after {
-        border-left: 135px solid transparent;
-        border-right: 135px solid transparent;
-        border-top: 25px solid white;
     }
 
     .contact-info {
@@ -53,9 +47,41 @@
     }
 
     .advantage-list__item:after {
-        border-left: 110px solid transparent;
-        border-right: 110px solid transparent;
+        display: block;
+        border-left: 105px solid transparent;
+        border-right: 105px solid transparent;
         border-top: 25px solid white;
+    }
+
+    .services-item__image {
+        width: 100%;
+        position: relative;
+        min-height: 167px;
+    }
+
+    .services-item__image_left {
+        background: url("../images/Rectangle 21.svg") no-repeat;
+    }
+
+    .services-item__image_right {
+        background: url("../images/Rectangle 8.svg") no-repeat;
+    }
+
+    .services-item__inner-image {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .services-item__image_left img {
+        right: 0;
+    }
+
+    .services-item__image_right {
+        left: 0;
+    }
+
+    .contact-page-form {
+        transform: translateY(-50%);
     }
 }
 
@@ -66,9 +92,16 @@
     }
 
     .advantage-list__item:after {
-        border-left: 150px solid transparent;
-        border-right: 150px solid transparent;
+        display: block;
+        border-left: 145px solid transparent;
+        border-right: 145px solid transparent;
         border-top: 25px solid white;
+    }
+
+    .services-item__image {
+        width: 100%;
+        position: relative;
+        min-height: 227px;
     }
 }
 
@@ -79,8 +112,15 @@
     }
 
     .advantage-list__item:after {
-        border-left: 180px solid transparent;
-        border-right: 180px solid transparent;
+        display: block;
+        border-left: 175px solid transparent;
+        border-right: 175px solid transparent;
         border-top: 25px solid white;
+    }
+
+    .services-item__image {
+        width: 100%;
+        position: relative;
+        min-height: 274px;
     }
 }
