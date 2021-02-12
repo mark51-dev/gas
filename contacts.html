@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    <title>Contacts</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/contact-form.js"></script>
+    <title>Альфа Синтез | Надійний постачальник електроенергії та природного газу</title>
 </head>
 <body>
 <header class="contact-page">
@@ -17,6 +19,7 @@
         <div class="row">
             <div class="col">
                 <div class="nav">
+                    <p>Альфа Синтез</p>
                     <label for="toggle">&#9776;</label>
                     <input type="checkbox" id="toggle"/>
                     <div class="menu">
@@ -33,7 +36,7 @@
             <div class="row main-menu align-items-center">
                 <div class="col-2">
                     <div class="logo-block">
-                        LOGO
+                        Альфа Синтез
                     </div>
                 </div>
                 <div class="col-6">
@@ -106,57 +109,65 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container contact-page-padd">
         <div class="row">
             <div class="col-12">
                 <div class="contact-form__block contact-page-form">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <form action="" class="main-contact-form">
+                            <form action="" class="main-contact-form" method="POST">
                                 <div class="formset">
                                     <div class="main-contact-item">
                                         <input name="first_name" type="text" placeholder="Ім’я"
-                                               class="main-contact-form__text">
+                                               class="main-contact-form__text" required id="contact-form_name">
                                     </div>
                                     <div class="main-contact-item">
                                         <input name="telephone" type="tel" placeholder="Телефон"
-                                               class="main-contact-form__tel">
+                                               class="main-contact-form__tel" required id="contact-form_phone">
                                     </div>
                                     <div class="main-contact-item">
                                         <input name="email" type="email" placeholder="Email"
-                                               class="main-contact-form__email">
+                                               class="main-contact-form__email" id="contact-form_email">
                                     </div>
-                                    <textarea name="text_area" id="" cols="30" rows="10" placeholder="Повідомлення"
-                                              class="main-contact-form__textarea"></textarea>
+                                    <textarea name="text_area" cols="30" rows="10" placeholder="Повідомлення"
+                                              class="main-contact-form__textarea" id="contact-form_message"></textarea>
                                 </div>
-                                <buttun class="main-contact-form__send" type="submit">Отправить</buttun>
+                                <button class="main-contact-form__send" type="submit" id="send_message">Отправить
+                                </button>
                             </form>
                         </div>
                         <div class="col-12 col-md-6">
                             <ul class="contact-info">
+                                <li class="contact-info__item">
+                                    ТОВ «АЛЬФА СИНТЕЗ»
+                                </li>
                                 <li class="contact-info__item"><img src="./images/location-pointer%201.svg"
                                                                     alt="location" class="contact-info__location">Адреса:
-                                    02131, Україна, м. Київ, вул. Шевченко, 23
+                                    01133, м. Київ, бульвар Лесі Українки, буд. 26, офіс 404
                                 </li>
                                 <li class="contact-info__item"><img src="./images/Group.svg" alt="location"
-                                                                    class="contact-info__location">Телефон: <a
-                                        href="tel:380985458854" class="color-black-fs-18-700">+38 098 545 88 54</a>,
+                                                                    class="contact-info__location">Тел./факс: <a
+                                        href="tel:380442238085" class="color-black-fs-18-700">+38 (044)
+                                    223-80-85</a>,
                                     <a
-                                            href="tel:380764345538" class="color-black-fs-18-700">+38 076 434 55
-                                        38</a>
+                                            href="tel:380948238085" class="color-black-fs-18-700">+38 (094)
+                                        823-80-85</a>
                                 </li>
                                 <li class="contact-info__item"><img src="./images/skype%201.svg" alt="location"
-                                                                    class="contact-info__location">Skype:<a
-                                        href="skype:supergas?chat"> supergas</a>
+                                                                    class="contact-info__location">E-mail:<a
+                                        href="mailto:info@aphasynthesis.com">info@aphasynthesis.com</a>
                                 </li>
                                 <li class="contact-info__item"><img src="./images/clock%201.svg" alt="location"
                                                                     class="contact-info__location">Працюємо з <span
                                         class="color-black">9:00-18:00, Пт.-Пт. Сб та Нд - вихідні</span></li>
                                 <li class="contact-info__item"><img src="./images/businessman%201.svg"
-                                                                    alt="location" class="contact-info__location">Генеральний
-                                    директор: <span class="color-black">Іваненко Петро Васильович</span></li>
+                                                                    alt="location" class="contact-info__location">Масенцов
+                                    Антон Вячеславович: <span class="color-black">Іваненко Петро Васильович</span>
+                                </li>
                             </ul>
                         </div>
+                        <div class="col-12 col-md-6" id="form__note"></div>
+                        <div class="col-12 col-md-6" id="confirmMsg "></div>
                     </div>
                 </div>
             </div>
@@ -170,13 +181,13 @@
                 <nav class="footer-nav">
                     <div class="row justify-content-center text-center">
                         <li class="footer-nav__item">
-                            <a href="#" class="footer-nav__link">Про нас</a>
+                            <a href="company.html" class="footer-nav__link">Про нас</a>
                         </li>
                         <li class="footer-nav__item">
-                            <a href="#" class="footer-nav__link">Послуги</a>
+                            <a href="#services" class="footer-nav__link">Послуги</a>
                         </li>
                         <li class="footer-nav__item">
-                            <a href="#" class="footer-nav__link">Контакти</a>
+                            <a href="contacts.html" class="footer-nav__link">Контакти</a>
                         </li>
                     </div>
                 </nav>
@@ -184,11 +195,11 @@
         </div>
         <div class="row justify-content-center text-center">
             <div class="logo">
-                Logo
+                Альфа Синтез
             </div>
         </div>
         <div class="row justify-content-center text-center">
-            <p class="copyright">© 2021 назва компанії. Всі права захищені.</p>
+            <p class="copyright">© 2021 Альфа Синтез. Всі права захищені.</p>
         </div>
     </div>
 </footer>

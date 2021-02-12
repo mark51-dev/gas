@@ -13,6 +13,34 @@
         border-right: 270px solid transparent;
         border-top: 40px solid white;
     }
+
+    .company-main-padd {
+        background-position: center 17rem;
+        background-size: auto;
+        padding: 5rem 6rem 24rem;
+    }
+
+    .company-mg-top {
+        margin-top: 20.6rem;
+    }
+
+    .tariffs-thead-col {
+        padding: 1.75rem 3.125rem;
+    }
+
+    .weird-image svg {
+        width: auto;
+    }
+
+    .header {
+        background-position: 766px 106px;
+    }
+
+    .company-mg-top-second {
+        margin-top: 4.625rem;
+        margin-bottom: 3.863rem;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -91,6 +119,19 @@
     .acts-main-padd {
         padding-bottom: 8.375rem;
     }
+
+    .contact-page-padd {
+        padding: 0;
+    }
+
+    .weird-image {
+        top: 23%;
+    }
+
+    .header {
+        background-position: center center;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -117,9 +158,19 @@
         display: block;
     }
 
-    .company-main-padd {
-        height: 1024px;
+    .company-mg-top {
+        margin-top: 4.6rem;
     }
+
+
+    .company-main-padd {
+        background-position: center 12rem;
+        background-size: auto;
+        padding: 5rem 6rem 6rem;
+    }
+
+
+
 
 }
 
@@ -149,4 +200,17 @@
     .weird-image-7 {
         display: block;
     }
+
+    .company-page-top-padd {
+        padding: 8.825rem 0;
+    }
+
+    .company-page-heading {
+        margin-top: 0;
+    }
+
+    .header-bg-image-company > img{
+        display: none;
+    }
+
 }

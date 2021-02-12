@@ -6,6 +6,13 @@
 }
 @font-face {
     font-family: 'helvetica';
+    src: url('../fonts/helvetica/HelveticaNowDisplay-Black.woff2') format('woff2'),
+    url('../fonts/helvetica/HelveticaNowDisplay-Black.woff') format('woff');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'helvetica';
     src: url('../fonts/helvetica/HelveticaNowDisplay-Bold.woff2') format('woff2'),
     url('../fonts/helvetica/HelveticaNowDisplay-Bold.woff') format('woff');
     font-weight: 700;
@@ -18,7 +25,7 @@
 }
 
 html {
-    font-size: 8px;
+    font-size: 10px;
     line-height: 21px;
 }
 
@@ -35,7 +42,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 48px;
     line-height: 2.188rem;
     font-weight: 700;
 }
@@ -50,11 +57,23 @@ h3 {
     position: relative;
 }
 
+.contact-page .nav {
+    color: #000;
+}
+
+.contact-page .logo-block {
+    color: #000;
+}
+
 .weird-image {
     position: absolute;
-    top: 23%;
+    top: 17%;
     left: 8%;
-    display: none;
+    width: 60px;
+}
+
+.weird-image svg {
+    width: 100px;
 }
 
 .weird-image2 {
@@ -121,7 +140,7 @@ h3 {
 .header {
     background-image: url("../images/header-bg.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: 723.5px 184px;
     height: 100vh;
 }
 
@@ -304,17 +323,14 @@ h3 {
     width: 100%;
 }
 
-.services-item__heading {
-    padding-left: 5px;
-}
-
-.services-item__text {
-    padding-left: 0.313rem;
-}
 
 .services__heading {
     margin-bottom: 3.313rem;
     text-align: center;
+}
+
+.services-item__heading {
+    margin-top: 1rem;
 }
 
 .contact-form {
@@ -360,13 +376,6 @@ h3 {
 }
 
 
-
-.main-contact-form__text,
-.main-contact-form__email,
-.main-contact-form__tel::placeholder {
-    color: #819FBC;
-}
-
 .main-contact-form__textarea {
     width: 100%;
     height: 115px;
@@ -388,17 +397,27 @@ h3 {
     padding: 0.625rem 0;
     margin-top: 1.25rem;
     transition: .3s;
+    border: none;
+}
+
+.main-contact-form__send:focus {
+    outline: none;
 }
 
 .main-contact-form__send:hover {
     background: #1CCBFC;
+    cursor: pointer;
 }
 
 .contact-info {
     border: 1px solid #C9DDF0;
     border-radius: 5px;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
     margin-top: 1.875rem;
+}
+
+.contact-page-padd {
+    padding: 30px 0;
 }
 
 .contact-info__item {
@@ -457,6 +476,10 @@ h3 {
     padding: 1.313rem 0;
 }
 
+.footer-nav__item:last-child {
+    margin-right: 0;
+}
+
 .footer-nav__link {
     color: #262B3D;
 }
@@ -466,6 +489,14 @@ h3 {
     text-align: right;
     height: 70px;
     line-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav p {
+    font-size: 13px;
+    padding-left: 5px;
 }
 
 .menu {
@@ -531,6 +562,22 @@ label {
 
 .contact-page #toggle {
     display: none;
+}
+
+.header .menu {
+    margin: 0 30px 0 0;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.header .menu a {
+    clear: right;
+    text-decoration: none;
+    color: #4C5472;
+    line-height: 70px;
+    font-size: 14px;
+    background: #EDF5FF;
 }
 
 
@@ -625,7 +672,7 @@ label {
 /* tariffs */
 
 .tariffs-page-top-padd {
-    background: url("../images/Group 101.jpg") no-repeat center center;
+    background: url("../images/Group 101.jpg") center center;
     padding: 7.063rem;
 }
 
@@ -643,23 +690,34 @@ label {
     background: #1F253D;
     color: #ffffff;
     font-weight: 700;
+    text-align: center;
 }
 
 .tariffs-thead-col {
-    padding: 1.75rem 3.125rem;
+    padding: 0 1rem;
 }
 
 .tariffs-body-row {
     text-align: center;
-    border-bottom: 4px solid lightgray;
+    border-radius: 5px;
 }
 
 .tariffs-body-col {
-    padding: 20px 0;
+    padding: 0.625rem 0;
+}
+
+.tariffs-body-row {
+    background: #fff;
 }
 
 .tariffs-body-row:nth-child(even) {
     background: #F6FAFF;
+}
+
+.tariffs-table {
+    border-collapse:separate;
+    border-spacing: 0 0.2rem;
+    width: 100%;
 }
 
 .tariffs-table-padd {
@@ -674,7 +732,7 @@ label {
 /* acts */
 
 .acts-page-top-padd {
-    background: url("../images/Group 101.jpg") no-repeat center center;
+    background: url("../images/Group 101.jpg") center center;
     color: #ffffff;
     padding: 7.063rem 0;
 }
@@ -705,9 +763,18 @@ label {
 /* company */
 
 .company-page-top-padd {
-    padding: 8.825rem 0;
+    padding: 0;
     background: #EDF5FF;
     position: relative;
+    margin-top: 0;
+}
+
+.header-bg-image-company > img {
+    width: 100%;
+}
+
+.company-page-heading {
+    margin-top: 2rem;
 }
 
 .company-top-bg-image {
@@ -738,7 +805,13 @@ label {
 
 .company-main-padd {
     background: url("../images/Group 106.svg") no-repeat center center;
-    padding: 80px 6rem;
+    padding: 5rem 6rem 8rem;
+    background-size: contain;
+    background-position: 0 120px;
+}
+
+.company-main-heading {
+    font-size: 3rem;
 }
 
 
@@ -753,12 +826,12 @@ label {
 }
 
 .company-mg-top {
-    margin-top: 7.5rem;
+    margin-top: 12.6rem;
 }
 
 .company-mg-top-second {
     margin-top: 5.625rem;
-    margin-bottom: 9.063rem;
+    margin-bottom: 3.863rem;
     display: none;
 }
 
@@ -769,4 +842,17 @@ label {
 
 .logo {
     padding: 1rem 0 1.5rem;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: #8B9EB1;
+}
+
+#form__note {
+    margin-top: 1rem;
+}
+
+#confirmMsg {
+    margin-top: 1rem;
 }
