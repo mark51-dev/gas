@@ -115,7 +115,7 @@ h3 {
 
 .color-black-fs-18-700 {
     color: #101423;
-    font-size: 1.125rem;
+    font-size: 16px;
     font-weight: 700;
     transition: .3s;
 }
@@ -132,9 +132,30 @@ h3 {
 .about-documents__description,
 .contact-page__description,
 .acts-page__description,
-.company-page__description {
+.company-page__description,
+.about-documents__link,
+.footer-nav,
+.footer,
+.tariffs-page__description,
+.tariffs-table,
+.acts-list {
     font-family: Roboto, sans-serif;
     font-weight: 400;
+    font-size: 14px;
+}
+
+.advantage-list__item-text {
+    font-size: 14px;
+}
+
+.main-contact-item input,
+textarea,
+.main-contact-form__send {
+    font-size: 16px;
+}
+
+.contact-info {
+    font-size: 14px;
 }
 
 .header {
@@ -180,7 +201,6 @@ h3 {
 
 .logo-block {
     color: #ffffff;
-    padding: 0.938rem 0;
 }
 
 .header-nav__link:hover {
@@ -327,6 +347,7 @@ h3 {
 .services__heading {
     margin-bottom: 3.313rem;
     text-align: center;
+    line-height: 4rem;
 }
 
 .services-item__heading {
@@ -380,7 +401,6 @@ h3 {
     width: 100%;
     height: 115px;
     padding: 0.813rem 0.625rem;
-    font-size: 0.875rem;
     border-radius: 5px;
     border: 1px solid #C9DDF0;
     color: #101A2C;
@@ -668,6 +688,10 @@ label {
     padding: 3.563rem 0;
 }
 
+.company-page__description {
+    margin-bottom: 0;
+}
+
 
 /* tariffs */
 
@@ -739,6 +763,7 @@ label {
 
 .acts-main-padd {
     background: #EDF5FF;
+    padding-bottom: 2.5rem;
 }
 
 
@@ -769,13 +794,15 @@ label {
     margin-top: 0;
 }
 
+.company-page-top-padd-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 .header-bg-image-company > img {
     width: 100%;
 }
 
-.company-page-heading {
-    margin-top: 2rem;
-}
 
 .company-top-bg-image {
     position: absolute;
@@ -805,7 +832,7 @@ label {
 
 .company-main-padd {
     background: url("../images/Group 106.svg") no-repeat center center;
-    padding: 5rem 6rem 8rem;
+    padding: 5rem 4rem 8rem;
     background-size: contain;
     background-position: 0 120px;
 }
@@ -845,14 +872,49 @@ label {
 }
 
 .copyright {
-    font-size: 0.75rem;
     color: #8B9EB1;
+    font-size: 0.75rem;
 }
 
 #form__note {
-    margin-top: 1rem;
+    transform: translateY(1rem);
+    font-size: 14px;
 }
 
 #confirmMsg {
     margin-top: 1rem;
+    font-size: 14px;
+}
+
+.contact-page .logo-link {
+    color: #4C5472;
+}
+
+.logo-link {
+    color: white;
+    transition: .3s;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+    color: #B5C3CA;
+}
+
+.contact-page .nav-logo {
+    color: #000000;
+}
+
+.nav-logo {
+    color: white;
+}
+
+.footer .logo a {
+    color: #212529;
+    transition: .3s;
+}
+
+
+.footer .logo a:hover {
+    text-decoration: none;
+    color: #262B3D;
 }

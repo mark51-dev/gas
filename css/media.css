@@ -169,9 +169,19 @@
         padding: 5rem 6rem 6rem;
     }
 
+    .main-contact-item input,
+    textarea,
+    .main-contact-form__send {
+        font-size: 14px;
+    }
 
+    .contact-info {
+        font-size: 0.875rem;
+    }
 
-
+    .color-black-fs-18-700 {
+        font-size: 1.125rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -202,7 +212,7 @@
     }
 
     .company-page-top-padd {
-        padding: 8.825rem 0;
+        padding: 10.425rem 0;
     }
 
     .company-page-heading {
