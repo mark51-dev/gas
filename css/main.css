@@ -61,6 +61,15 @@ h3 {
     color: #000;
 }
 
+.logo-block {
+    width: 121px;
+    margin-left: 12px;
+}
+
+.logo-block img {
+    max-width: 100%;
+}
+
 .contact-page .logo-block {
     color: #000;
 }
@@ -182,7 +191,7 @@ textarea,
 .header-nav__item {
     list-style-type: none;
     margin-right: 1.875rem;
-    padding: 0.938rem 0;
+    padding: 1.938rem 0 1.563rem;
 }
 
 .header-nav__item:last-child {
@@ -212,6 +221,7 @@ textarea,
     color: #FFFFFF;
     padding: 0.938rem 0;
     position: relative;
+    margin-top: 8px;
 }
 
 .phone-block:before {
@@ -298,6 +308,7 @@ textarea,
     padding: 3.375rem 1.625rem 3.625rem;
     background: #fff;
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .advantage-list__item:before {
@@ -868,7 +879,16 @@ label {
 
 
 .logo {
-    padding: 1rem 0 1.5rem;
+    padding: 0.3rem 0 1.5rem;
+    width: 121px;
+}
+
+.logo-block {
+    max-width: 121px;
+}
+
+.logo img {
+    max-width: 100%;
 }
 
 .copyright {
@@ -917,4 +937,14 @@ label {
 .footer .logo a:hover {
     text-decoration: none;
     color: #262B3D;
+}
+
+.mobile-menu-logo-wrapper,
+.mobile-menu-logo-wrapper-light {
+    max-width: 121px;
+}
+
+.mobile-menu-logo-wrapper img,
+.mobile-menu-logo-wrapper-light img {
+    max-width: 100%;
 }
